@@ -48,7 +48,7 @@ Os nomes das pastas e dos arquivos podem variar. Ajuste conforme a organização
 Como visualizar
 Clone o repositório:
 bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/Andre-Roger/PaginaPessoalCSS
 Abra a pasta do projeto.
 Dê dois cliques no arquivo HTML para abrir no navegador.
 Autor
