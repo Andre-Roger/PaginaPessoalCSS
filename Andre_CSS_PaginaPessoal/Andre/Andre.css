@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: dense;
+    gap: 1rem 2rem;
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 0 2rem 2rem;
+    background-color: #f4f1e8;
+    color: #0f4c5c;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+h1,
+hr,
+#lugares,
+p {
+    grid-column: 1 / -1;
+}
+
+p:empty {
+    display: none;
+}
+
+body > img {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+#curiosidades,
+#curiosidades + ul {
+    grid-column: 1 / -1;
+}
+
+#curiosidades + ul {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 2rem;
+}
+
+#ja_fui,
+nav > ul:first-child {
+    grid-column: 1;
+}
+
+#desejo,
+#desejo + ul {
+    grid-column: 2;
+}
+
+nav {
+    display: contents;
+}
+
+nav > br {
+    display: none;
+}
+
+h1 {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin: 0 -2rem;
+    padding: 1rem 2rem;
+    background-color: #0f4c5c;
+    color: #f4f1e8;
+    border-bottom: 0.3rem solid #d11a8c;
+    font-size: 1.8rem;
+}
+
+h2 {
+    margin: 0;
+    padding-left: 0.8rem;
+    border-left: 0.4rem solid #d11a8c;
+}
+
+h3 {
+    margin: 0;
+    color: #d11a8c;
+}
+
+h4 {
+    display: block;
+    width: fit-content;
+    margin: 1rem 0 0.5rem;
+    padding: 0.2rem 0.8rem;
+    background-color: #d11a8c;
+    color: #f4f1e8;
+    border-radius: 0.3rem;
+}
+
+img {
+    display: block;
+    width: 15rem;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+    border: 0.2rem solid #d11a8c;
+    border-radius: 0.5rem;
+}
+
+nav img {
+    float: left;
+    width: 10rem;
+    margin: 0 1rem 0.5rem 0;
+}
+
+img + br {
+    display: none;
+}
+
+nav h4 {
+    clear: both;
+}
+
+ul {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+}
+
+nav ul {
+    display: block;
+}
+
+a {
+    color: #d11a8c;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: #d11a8c;
+    color: #f4f1e8;
+}
+
+q {
+    font-style: italic;
+    color: #d11a8c;
+}
+
+hr {
+    width: 100%;
+    border: 0;
+    border-top: 0.15rem solid #d11a8c;
+}
+
+@media (max-width: 600px) {
+    body {
+        grid-template-columns: 1fr;
+        padding: 0 1rem 1rem;
+        font-size: 1rem;
+    }
+
+    body > img {
+        width: 60%;
+    }
+
+    #curiosidades + ul {
+        grid-template-columns: 1fr;
+    }
+
+    #desejo,
+    #desejo + ul {
+        grid-column: 1;
+    }
+
+    h1 {
+        position: static;
+        margin: 0 -1rem;
+        padding: 1rem;
+        font-size: 1.4rem;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    nav img {
+        float: none;
+        width: 100%;
+        margin: 0 0 0.5rem;
+    }
+}
